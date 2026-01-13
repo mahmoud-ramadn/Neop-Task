@@ -24,7 +24,6 @@
 
 <script setup lang="ts">
 import { useI18n } from "vue-i18n";
-import SvgIcon from "../ui/SvgIcon.vue";
 
 const { locale } = useI18n();
 
