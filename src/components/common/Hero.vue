@@ -14,9 +14,10 @@
     />
 
     <section
-      class="container mx-auto px-4 md:px-6 py-8 md:py-16 lg:py-24 flex flex-col lg:flex-row items-center justify-between min-h-[600px] lg:min-h-[800px] relative"
+      class="container mx-auto px-4 md:px-6 py-8 md:py-16 lg:py-24 flex flex-col lg:flex-row items-center justify-between 
+      min-h-[700px] lg:min-h-[800px] relative"
     >
-      <div class="w-full lg:w-1/2 relative z-10 mb-10 lg:mb-0 lg:pr-8">
+      <div class="w-full lg:w-1/2  relative z-10 md:mb-10 lg:mb-0 lg:pr-8">
         <div class="max-w-full lg:max-w-[400px]">
           <h1
             class="text-primary font-quicksand font-bold text-5xl md:text-7xl lg:text-8xl relative leading-tight"
@@ -43,7 +44,8 @@
       </div>
     </section>
     <div
-      class="2xl:w-[1200px] lg:w-[800px] md:w-[600px]   mx-auto w-full md:top-1/4 sm:top-[30%] top-[40%] absolute right-0 "
+      class="2xl:w-[1200px] lg:w-[800px] md:w-[600px]
+       mx-auto w-full md:top-1/4 sm:top-[30%] max-sm:top-[55%] top-[45%] absolute right-0 "
     >
       <SwiperWrapper 
         customClass="hero-swiper"
