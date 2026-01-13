@@ -1,10 +1,17 @@
 <template>
   <div class="md:mt-16 mt-9">
-    <div class="text-center space-y-2.5">
-      <h3 class="text-lg text-secondary">Our products</h3>
-      <p class="text-3xl font-bold text-secondary">Special to Try</p>
-    </div>
-
+    <motion.div
+      class="text-center space-y-2.5"
+      :initial="{ opacity: 0, y: 30 }"
+      :while-in-view="{ opacity: 1, y: 0 }"
+      :transition="{ duration: 0.6, ease: 'easeOut' }"
+      viewport="{ amount: 0.2 }"
+    >
+      <h3 class="text-lg text-secondary">{{ $t("ourProducts.heading") }}</h3>
+      <p class="text-3xl font-bold text-secondary">
+        {{ $t("ourProducts.subheading") }}
+      </p>
+    </motion.div>
     <div>
       <CategoriesSkeleton v-if="loading" :count="6" />
       <div v-else-if="error">Error: {{ error.message }}</div>
@@ -62,6 +69,7 @@
 
 <script setup lang="ts">
 import { ref } from "vue";
+import { motion } from "motion-v";
 import { useCategories } from "../../composables/useCategories";
 import { useProducts } from "../../composables/useProducts";
 const currentCategory = ref("");

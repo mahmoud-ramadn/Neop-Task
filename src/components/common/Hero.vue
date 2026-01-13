@@ -14,10 +14,14 @@
     />
 
     <section
-      class="container mx-auto px-4 md:px-6 py-8 md:py-16 lg:py-24 flex flex-col lg:flex-row items-center justify-between 
-      min-h-[700px] lg:min-h-[800px] relative"
+      class="container mx-auto px-4 md:px-6 py-8 md:py-16 lg:py-24 flex flex-col lg:flex-row items-center justify-between min-h-[700px] lg:min-h-[800px] relative"
     >
-      <div class="w-full lg:w-1/2  relative z-10 md:mb-10 lg:mb-0 lg:pr-8">
+      <motion.div
+        class="w-full lg:w-1/2 relative z-10 md:mb-10 lg:mb-0 lg:pr-8"
+        :initial="{ opacity: 0, x: -50 }"
+        :while-in-view="{ opacity: 1, x: 0 }"
+        :transition="{ duration: 0.8, ease: 'easeOut' }"
+      >
         <div class="max-w-full lg:max-w-[400px]">
           <h1
             class="text-primary font-quicksand font-bold text-5xl md:text-7xl lg:text-8xl relative leading-tight"
@@ -28,42 +32,65 @@
             />
             coffee &shop 7
           </h1>
-          <p class="text-secondary text-lg md:text-xl mt-4 md:mt-6">
-            Get your ordered (better) coffee delivered to you if you want.
-          </p>
-          <div class="flex items-center space-x-3 mt-6 md:mt-8">
+
+          <motion.p
+            class="text-secondary text-lg md:text-xl mt-4 md:mt-6"
+            :initial="{ opacity: 0, y: 20 }"
+            :while-in-view="{ opacity: 1, y: 0 }"
+            :transition="{ duration: 0.6, ease: 'easeOut', delay: 0.2 }"
+          >
+            {{ $t("hero.subtitle") }}
+          </motion.p>
+
+          <motion.div
+            class="flex items-center space-x-3 mt-6 md:mt-8"
+            :initial="{ opacity: 0, y: 20 }"
+            :while-in-view="{ opacity: 1, y: 0 }"
+            :transition="{ duration: 0.6, ease: 'easeOut', delay: 0.4 }"
+          >
             <button
               class="border border-secondary text-secondary font-semibold py-3 px-6 rounded-2xl hover:bg-secondary hover:text-white transition-all duration-300 flex items-center"
             >
-              <span class="font-medium"> SHOP 20% OFF </span>
+              <span class="font-medium">{{ $t("hero.cta") }}</span>
               <svg-icon name="ArrowDownRight" class="ml-2 size-4" />
             </button>
             <SvgIcon name="bag" class="size-10 md:size-12 text-secondary" />
-          </div>
+          </motion.div>
         </div>
-      </div>
+      </motion.div>
     </section>
-    <div
-      class="2xl:w-[1200px] lg:w-[800px] md:w-[600px]
-       mx-auto w-full md:top-1/4 sm:top-[30%] max-sm:top-[55%] top-[45%] absolute right-0 "
+
+    <motion.div
+      class="2xl:w-[1200px] lg:w-[800px] md:w-[600px] mx-auto w-full md:top-1/4 sm:top-[30%] max-sm:top-[55%] top-[45%] absolute right-0"
+      :initial="{ opacity: 0, scale: 0.9 }"
+      :while-in-view="{ opacity: 1, scale: 1 }"
+      :transition="{ duration: 0.8, ease: 'easeOut', delay: 0.6 }"
     >
-      <SwiperWrapper 
+      <SwiperWrapper
         customClass="hero-swiper"
-        :items="products" 
-        :options="options" 
+        :items="products"
+        :options="options"
         :arrows="true"
       >
         <template #default="{ item }">
-          <div class="flex flex-col items-center    justify-center">
+          <motion.div
+            class="flex flex-col items-center justify-center"
+            :initial="{ opacity: 0, y: 20 }"
+            :animate="{ opacity: 1, y: 0 }"
+            :transition="{ duration: 0.4, ease: 'easeOut' }"
+          >
             <img :src="item?.image" :alt="item?.name" class="rounded-lg" />
-          </div>
+          </motion.div>
         </template>
       </SwiperWrapper>
-    </div>
+    </motion.div>
+
+
   </div>
 </template>
 
 <script setup lang="ts">
+  import { motion } from "motion-v"
 import one from "@/assets/images/coffe-seeds.webp";
 import two from "@/assets/images/coffe-two.webp";
 const products = [
@@ -79,7 +106,7 @@ const options = {
   slidesPerView: 3,
   loop: true,
   spaceBetween: 0,
-  autoplay:false,
+  autoplay: false,
   // autoPlay: { delay: 3000, disableOnInteraction: false },
   pagination: false,
   centeredSlides: true,
@@ -87,7 +114,6 @@ const options = {
 </script>
 
 <style>
-
 .hero-swiper .swiper-slide {
   transition: transform 0.4s ease, background-color 0.4s ease, opacity 0.4s ease;
 }

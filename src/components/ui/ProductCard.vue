@@ -1,6 +1,8 @@
-<!-- src/components/ProductCard.vue -->
 <template>
-  <div class="w-full relative">
+  <router-link
+    :to="`/product/${product.id}`"
+    class="w-full relative block"
+  >
     <!-- Discount badge -->
     <span
       v-if="product.discountPercentage"
@@ -27,33 +29,34 @@
     <!-- Info -->
     <div class="flex items-center flex-col mt-10 justify-center gap-x-1">
       <p class="text-center font-medium text-secondary">
-        {{ product?.title }}
+        {{ product.title }}
       </p>
       <p class="text-center font-medium text-violet-100 py-3">
-        {{ product?.brand }}
+        {{ product.brand }}
       </p>
       <div class="flex items-center gap-x-1">
         <SvgIcon
-          v-for="n in Math.floor(product?.rating)"
+          v-for="n in Math.floor(product.rating)"
           :key="n"
           name="Star 1"
           class="size-5"
         />
       </div>
     </div>
-  </div>
+  </router-link>
 </template>
-
 <script setup lang="ts">
-interface ProductCardProps {
-  id: number;
-  title: string;
-  brand: string;
-  thumbnail: string;
-  discountPercentage?: number;
-  rating: number;
-}
-defineProps<{
-  product: ProductCardProps;
-}>();
-</script>
+  interface ProductCardProps {
+    id: number
+    title: string
+    brand: string
+    thumbnail: string
+    discountPercentage?: number
+    rating: number
+  }
+  
+  defineProps<{
+    product: ProductCardProps
+  }>()
+  </script>
+  

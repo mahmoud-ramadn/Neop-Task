@@ -10,14 +10,9 @@ const router = createRouter({
       component: HomeView,
     },
     {
-      path: "/about",
-      name: "About",
-      component: () => import("@/views/About.vue"),
-    },
-    {
-      path: "/ui-test",
-      name: "UiTesting",
-      component: () => import("@/views/UiTesting.vue"),
+      path: "/product/:id",
+      name: "product",
+      component: () => import("@/views/product.vue"),
     },
     {
       path: "/:catchAll(.*)",
