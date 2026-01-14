@@ -67,13 +67,15 @@
     </section>
 
     <motion.div
-      class="2xl:w-[1200px] lg:w-[800px] md:w-[600px]  mx-auto w-full md:top-1/4 sm:top-[30%] max-sm:top-[42%] top-[42%] absolute right-0"
+      class="2xl:w-[1200px] lg:w-[800px] md:w-[600px] 
+      
+      sw mx-auto w-full md:top-1/4 sm:top-[30%] max-sm:top-[42%] top-[42%] absolute right-0"
       :initial="{ opacity: 0, scale: 0.9 }"
       :while-in-view="{ opacity: 1, scale: 1 }"
       :transition="{ duration: 0.8, ease: 'easeOut', delay: 0.6 }"
     >
       <SwiperWrapper
-        customClass="hero-swiper sw"
+        customClass="hero-swiper "
         :items="products"
         :options="options"
         :arrows="true"
@@ -139,24 +141,38 @@ const options = {
   border-radius: 50%;
 }
 
-@media (max-width: 360px) {
+@media (min-width: 370px) {
   .sw {
-    margin-top:100px;
-  
+    margin-top: 100px;
   }
 }
-@media (min-width: 540px) {
+@media (min-width: 350px) {
   .sw {
-    margin-top:60px;
-  
+    margin-top: 160px;
+  }
+}
+@media (min-width: 430px) {
+  .sw {
+    margin-top: 100px;
   }
 }
 
-@media (min-width: 375px) {
+@media (min-width: 570px) {
   .sw {
-    margin-top:100px;
-  
+    margin-top: -60px;
   }
 }
+@media (min-width: 470px) {
+  .sw {
+    margin-top: -100px;
+  }
+}
+
+@media (min-width: 2550px) {
+  .sw {
+    margin-top: 0px;
+  }
+}
+
 
 </style>
