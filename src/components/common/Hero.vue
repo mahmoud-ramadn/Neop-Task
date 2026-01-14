@@ -69,7 +69,7 @@
     <motion.div
       class="2xl:w-[1200px] lg:w-[800px] md:w-[600px] 
       
-      sw mx-auto w-full md:top-1/4 sm:top-[30%] max-sm:top-[42%] top-[42%] absolute right-0"
+      sww mx-auto w-full md:top-1/4 sm:top-[30%] max-sm:top-[42%] top-[42%] absolute right-0"
       :initial="{ opacity: 0, scale: 0.9 }"
       :while-in-view="{ opacity: 1, scale: 1 }"
       :transition="{ duration: 0.8, ease: 'easeOut', delay: 0.6 }"
@@ -141,38 +141,42 @@ const options = {
   border-radius: 50%;
 }
 
-@media (min-width: 370px) {
-  .sw {
-    margin-top: 100px;
+
+@media (max-width: 1023px) {
+  .hero-swiper :deep(.swiper-slide) {
+    opacity: 0.7;
+    transform: scale(0.9);
   }
-}
-@media (min-width: 350px) {
-  .sw {
-    margin-top: 160px;
-  }
-}
-@media (min-width: 430px) {
-  .sw {
-    margin-top: 100px;
+  
+  .hero-swiper :deep(.swiper-slide-active) {
+    transform: scale(1);
   }
 }
 
-@media (min-width: 570px) {
-  .sw {
-    margin-top: -60px;
-  }
-}
-@media (min-width: 470px) {
-  .sw {
-    margin-top: -100px;
+@media (max-width: 640px) {
+  .hero-swiper :deep(.swiper-slide) {
+    opacity: 0.8;
+    transform: scale(0.95);
   }
 }
 
-@media (min-width: 2550px) {
-  .sw {
-    margin-top: 0px;
+@media (min-width: 640px) and (max-width: 768px) {
+  .sww {
+    margin: 0 auto 160px auto;
+    background: yellow;
   }
 }
 
+@media (min-width:545px) and (max-width: 639px)   {
+  .sww {
+    margin-top:-170px;
+    background: red;
+  }
+} 
+@media (max-width: 420px) {
+  .sww {
+ margin-top:120px;
+  }
+}
 
 </style>
