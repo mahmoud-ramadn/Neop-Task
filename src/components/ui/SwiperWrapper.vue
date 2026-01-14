@@ -59,7 +59,6 @@
 import { Swiper, SwiperSlide } from "swiper/vue";
 import { ref, computed } from "vue";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
-
 type SlideItem = {
   id?: string | number;
   [key: string]: any;

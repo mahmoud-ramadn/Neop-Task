@@ -17,7 +17,6 @@ declare module 'vue' {
     Footer: typeof import('./src/components/common/Footer.vue')['default']
     Hero: typeof import('./src/components/common/Hero.vue')['default']
     LoadingSpinner: typeof import('./src/components/feedbacke/LoadingSpinner.vue')['default']
-    MyButton: typeof import('./src/components/ui/MyButton.vue')['default']
     Navbar: typeof import('./src/components/common/Navbar.vue')['default']
     OurProducts: typeof import('./src/components/ui/OurProducts.vue')['default']
     ProductActionButtons: typeof import('./src/components/ui/product/ProductActionButtons.vue')['default']

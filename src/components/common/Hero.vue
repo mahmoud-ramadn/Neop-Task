@@ -14,11 +14,10 @@
     />
 
     <section
-      class="container mx-auto px-4 md:px-6 py-8 md:py-16 lg:py-24 flex flex-col lg:flex-row items-center justify-between min-h-[700px] lg:min-h-[800px] relative"
+      class="container mx-auto  px-4 md:px-6 py-8 md:py-16 lg:py-24 flex flex-col lg:flex-row items-center  min-h-[700px] lg:min-h-[800px] relative"
     >
       <motion.div
-        class="w-full lg:w-1/2 relative z-10 md:mb-10 lg:mb-0 lg:pr-8"
-        :initial="{ opacity: 0, x: -50 }"
+        class="w-full lg:w-1/2 relative z-10 md:mb-10 lg:mb-0 lg:pe-8"
         :while-in-view="{ opacity: 1, x: 0 }"
         :transition="{ duration: 0.8, ease: 'easeOut' }"
       >
@@ -28,7 +27,7 @@
           >
             <svg-icon
               name="seed"
-              class="inline-block absolute md:left-5 left-3 md:top-13.5 top-7 md:size-6 size-3 text-secondary"
+              class="inline-block absolute md:start-5 start-3 md:top-13.5 top-7 md:size-6 size-3 text-secondary"
             />
             coffee &shop 7
           </h1>
@@ -43,25 +42,18 @@
           </motion.p>
 
           <motion.div
-            class="flex items-center space-x-3 mt-6 md:mt-8"
+            class="flex items-center space-x-3 rtl:space-x-reverse mt-6 md:mt-8"
             :initial="{ opacity: 0, y: 20 }"
             :while-in-view="{ opacity: 1, y: 0 }"
             :transition="{ duration: 0.6, ease: 'easeOut', delay: 0.4 }"
           >
-            <button
-              class="border border-secondary text-secondary font-semibold py-3 px-6 rounded-2xl hover:bg-secondary hover:text-white transition-all duration-300 flex items-center"
-            >
-              <span class="font-medium">{{ $t("hero.cta") }}</span>
-              <svg-icon name="ArrowDownRight" class="ml-2 size-4" />
-            </button>
-            <SvgIcon name="bag" class="size-10 md:size-12 text-secondary" />
           </motion.div>
         </div>
       </motion.div>
     </section>
 
     <motion.div
-      class="2xl:w-[1200px] lg:w-[800px] md:w-[600px] mx-auto w-full md:top-1/4 sm:top-[30%] max-sm:top-[55%] top-[45%] absolute right-0"
+      class="2xl:w-[1200px] lg:w-[800px] md:w-[600px]  mx-auto w-full md:top-1/4 sm:top-[30%] max-sm:top-[42%] top-[42%] absolute right-0"
       :initial="{ opacity: 0, scale: 0.9 }"
       :while-in-view="{ opacity: 1, scale: 1 }"
       :transition="{ duration: 0.8, ease: 'easeOut', delay: 0.6 }"
@@ -84,13 +76,11 @@
         </template>
       </SwiperWrapper>
     </motion.div>
-
-
   </div>
 </template>
 
 <script setup lang="ts">
-  import { motion } from "motion-v"
+import { motion } from "motion-v";
 import one from "@/assets/images/coffe-seeds.webp";
 import two from "@/assets/images/coffe-two.webp";
 const products = [
@@ -107,7 +97,7 @@ const options = {
   loop: true,
   spaceBetween: 0,
   autoplay: false,
-  // autoPlay: { delay: 3000, disableOnInteraction: false },
+  autoPlay: { delay: 3000, disableOnInteraction: false },
   pagination: false,
   centeredSlides: true,
 };
@@ -115,11 +105,11 @@ const options = {
 
 <style>
 .hero-swiper .swiper-slide {
+  margin-top: 20px;
   transition: transform 0.4s ease, background-color 0.4s ease, opacity 0.4s ease;
 }
 
 .hero-swiper .swiper-slide-active {
-  margin-top: 20px;
   transform: scale(1.1);
   background-color: #1e71a6;
   border-radius: 50%;

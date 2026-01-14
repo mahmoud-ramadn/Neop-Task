@@ -1,5 +1,5 @@
 <template>
-  <nav class="container flex justify-between items-center py-6 lg:px-16">
+  <nav  :dir="locale === 'ar' ? 'rtl' : 'ltr'" class="container flex justify-between items-center py-6 lg:px-16">
     <router-link to="/" class="w-10 h-8 cursor-pointer block">
       <SvgIcon name="logo" class="w-10 h-8" />
     </router-link>

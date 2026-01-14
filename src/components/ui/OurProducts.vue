@@ -118,7 +118,7 @@ const productsOptions = {
   slidesPerView: 4,
   loop: false,
   spaceBetween: 20,
-  autoPlay: false,
+  autoPlay: { delay: 3000, disableOnInteraction: false },
   pagination: false,
   navigation: true,
   centeredSlides: false,

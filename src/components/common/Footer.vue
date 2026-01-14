@@ -6,13 +6,14 @@
       :src="coffeeBasket"
       alt="coffee-seeds"
       loading="lazy"
+      :class="locale === 'ar' ? ' md:left-12 -left-30' :' md:right-12 -right-30'"
       class="absolute md:right-12 -right-30 -top-50 md:-top-80 z-10"
       :initial="{ y: 100, opacity: 0 }"
       :while-in-view="{ y: 0, opacity: 1 }"
       :transition="{ duration: 1, ease: 'easeOut' }"
     />
 
-    <div class="container grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-8">
+    <div :dir="locale === 'ar' ? 'rtl' : 'ltr'"  class="container grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-8">
       <div
         v-for="link in footerdata"
         :key="link.id"
@@ -35,6 +36,9 @@
 
 <script setup lang="ts">
 import { motion } from "motion-v";
+import { useI18n } from "vue-i18n";
+
+const { locale } = useI18n();
 import coffeeBasket from "@/assets/images/coffe-backet.webp";
 interface FooterLink {
   id: number;
