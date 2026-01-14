@@ -48,6 +48,20 @@
             :transition="{ duration: 0.6, ease: 'easeOut', delay: 0.4 }"
           >
           </motion.div>
+          <motion.div
+            class="flex items-center space-x-3 mt-6 md:mt-8"
+            :initial="{ opacity: 0, y: 20 }"
+            :while-in-view="{ opacity: 1, y: 0 }"
+            :transition="{ duration: 0.6, ease: 'easeOut', delay: 0.4 }"
+          >
+            <button
+              class="border border-secondary text-secondary font-semibold py-3 px-6 rounded-2xl hover:bg-secondary hover:text-white transition-all duration-300 flex items-center"
+            >
+              <span class="font-medium">{{ $t("hero.cta") }}</span>
+              <svg-icon name="ArrowDownRight" class="ml-2 size-4" />
+            </button>
+            <SvgIcon name="bag" class="size-10 md:size-12 text-secondary" />
+          </motion.div>
         </div>
       </motion.div>
     </section>
