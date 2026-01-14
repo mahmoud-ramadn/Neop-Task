@@ -145,9 +145,16 @@ const options = {
   
   }
 }
-@media (min-width: 600px) {
+@media (min-width: 540px) {
   .sw {
-    margin-top:-55px;
+    margin-top:60px;
+  
+  }
+}
+
+@media (min-width: 375px) {
+  .sw {
+    margin-top:100px;
   
   }
 }
