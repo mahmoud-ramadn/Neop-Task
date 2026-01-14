@@ -3,7 +3,6 @@
     :to="`/product/${product.id}`"
     class="w-full relative block"
   >
-    <!-- Discount badge -->
     <span
       v-if="product.discountPercentage"
       class="bg-[#F9EDBD] rounded-lg py-2 px-3 text-secondary flex items-center justify-center absolute left-10 top-10 z-30"
@@ -11,7 +10,6 @@
       {{ product.discountPercentage }} %
     </span>
 
-    <!-- Image wrapper -->
     <div
       class="w-full rounded-tr-[20%] rounded-tl-[20%] p-2 rounded-bl-[30%] rounded-br-[30%] bg-primary group transition-all duration-300"
     >
@@ -26,7 +24,6 @@
       </div>
     </div>
 
-    <!-- Info -->
     <div class="flex items-center flex-col mt-10 justify-center gap-x-1">
       <p class="text-center font-medium text-secondary">
         {{ product.title }}
