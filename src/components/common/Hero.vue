@@ -163,14 +163,12 @@ const options = {
 @media (min-width: 640px) and (max-width: 768px) {
   .sww {
     margin: 0 auto 160px auto;
-    background: yellow;
   }
 }
 
 @media (min-width:545px) and (max-width: 639px)   {
   .sww {
     margin-top:-170px;
-    background: red;
   }
 } 
 @media (max-width: 420px) {
