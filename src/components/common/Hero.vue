@@ -73,7 +73,7 @@
       :transition="{ duration: 0.8, ease: 'easeOut', delay: 0.6 }"
     >
       <SwiperWrapper
-        customClass="hero-swiper"
+        customClass="hero-swiper sw"
         :items="products"
         :options="options"
         :arrows="true"
@@ -138,4 +138,18 @@ const options = {
   z-index: 1;
   border-radius: 50%;
 }
+
+@media (max-width: 360px) {
+  .sw {
+    margin-top:100px;
+  
+  }
+}
+@media (min-width: 600px) {
+  .sw {
+    margin-top:-55px;
+  
+  }
+}
+
 </style>
