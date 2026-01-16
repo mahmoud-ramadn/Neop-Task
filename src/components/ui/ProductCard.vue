@@ -17,7 +17,7 @@
           :src="product.thumbnail"
           :alt="product.title"
           loading="lazy"
-          class="w-full object-cover bg-white h-full transition-transform duration-300 group-hover:scale-110"
+          class="w-full object-cover lg:min-h-[310px]  bg-white h-full transition-transform duration-300 group-hover:scale-110"
         />
       </div>
     </div>
