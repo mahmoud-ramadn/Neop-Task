@@ -1,13 +1,13 @@
 <template>
   <div class="max-w-[950px] mx-auto px-1 mt-10">
-    <SwiperWrapper 
-      :items="skeletonItems" 
+    <SwiperWrapper
+      :items="skeletonItems"
       :options="options"
       customClass="categories-swiper"
       :arrows="false"
     >
       <template #default="{ item }">
-        <div 
+        <div
           :key="item"
           class="bg-gray-200 rounded-lg animate-pulse h-10"
           :class="item"
@@ -18,11 +18,18 @@
 </template>
 
 <script setup lang="ts">
-
 const skeletonItems = [
-  'w-32', 'w-28', 'w-36', 'w-24', 'w-40', 'w-30',
-  'w-34', 'w-26', 'w-38', 'w-22'
-]
+  "w-32",
+  "w-28",
+  "w-36",
+  "w-24",
+  "w-40",
+  "w-30",
+  "w-34",
+  "w-26",
+  "w-38",
+  "w-22",
+];
 
 const options = {
   slidesPerView: 6,
@@ -49,5 +56,5 @@ const options = {
       spaceBetween: 10,
     },
   },
-}
+};
 </script>

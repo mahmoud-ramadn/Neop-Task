@@ -5,7 +5,3 @@
     ></div>
   </div>
 </template>
-
-<script setup lang="ts">
-// No props needed for basic spinner
-</script>

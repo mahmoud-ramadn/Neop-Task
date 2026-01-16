@@ -76,7 +76,8 @@ type OptionsType = {
   centeredSlides?: boolean;
   spaceBetween?: number;
   effect?: "slide" | "fade" | "cube" | "coverflow" | "flip";
-  breakpoints?: Record <number,
+  breakpoints?: Record<
+    number,
     {
       slidesPerView?: number;
       spaceBetween?: number;
@@ -111,7 +112,7 @@ const props = withDefaults(defineProps<Props>(), {
   }),
   arrows: false,
   gridRows: 1,
-  customClass: 'currentSwiper',
+  customClass: "currentSwiper",
 });
 
 const emit = defineEmits(["slide-change"]);
@@ -168,4 +169,3 @@ defineExpose({
   slideTo,
 });
 </script>
-

@@ -1,11 +1,11 @@
 <template>
-  <div class="min-h-screen  py-8">
+  <div class="min-h-screen py-8">
     <LoadingSpinner v-if="loading" />
 
     <ErrorMessage v-else-if="error" :message="error.message" />
 
     <div v-else-if="product" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="bg-white rounded-xl  overflow-hidden">
+      <div class="bg-white rounded-xl overflow-hidden">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 p-8">
           <ProductImageGallery
             :thumbnail="product.thumbnail"

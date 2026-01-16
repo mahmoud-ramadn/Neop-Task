@@ -2,9 +2,5 @@
   <Hero />
   <CoffeeMarquee />
   <OurProducts />
-  <Wecome/>
+  <Wecome />
 </template>
-
-<script setup lang="ts">
-
-</script>  

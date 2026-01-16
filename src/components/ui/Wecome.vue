@@ -95,9 +95,7 @@ const items = [
             :transition="{ duration: 0.6, ease: 'easeOut', delay: index * 0.2 }"
             class="p-4 z-10 rounded-lg flex md:flex-row flex-col gap-y-4 gap-x-3 items-center bg-white hover:shadow-lg transition-all duration-300"
             :class="
-              locale === 'ar'
-                ? 'text-right '
-                : 'md:justify-start text-left'
+              locale === 'ar' ? 'text-right ' : 'md:justify-start text-left'
             "
           >
             <span
@@ -105,7 +103,7 @@ const items = [
             >
               <SvgIcon :name="item.svg" class="text-primary size-8 mb-2" />
             </span>
-            <div class=" md:text-start text-center">
+            <div class="md:text-start text-center">
               <h3 class="font-semibold text-primary text-lg mb-2">
                 {{ $t(item.titleKey) }}
               </h3>

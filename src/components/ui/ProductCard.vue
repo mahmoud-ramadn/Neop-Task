@@ -1,8 +1,5 @@
 <template>
-  <router-link
-    :to="`/product/${product.id}`"
-    class="w-full relative  block"
-  >
+  <router-link :to="`/product/${product.id}`" class="w-full relative block">
     <span
       v-if="product.discountPercentage"
       class="bg-[#F9EDBD] rounded-lg py-2 px-3 text-secondary flex items-center justify-center absolute left-10 top-10 z-30"
@@ -11,10 +8,10 @@
     </span>
 
     <div
-      class="w-full rounded-tr-[20%] rounded-tl-[20%] p-2 rounded-bl-[30%] rounded-br-[30%] bg-primary group transition-all duration-300"
+      class="w-full rounded-tr-[20%] lg:min-h-[300px]   rounded-tl-[20%] p-2 rounded-bl-[30%] rounded-br-[30%] bg-primary group transition-all duration-300"
     >
       <div
-        class="relative overflow-hidden  h-full rounded-tr-[20%] rounded-tl-[20%] rounded-bl-[30%] rounded-br-[30%] border-l-10 border-t-10 border-secondary"
+        class="relative overflow-hidden  rounded-tr-[20%] rounded-tl-[20%] rounded-bl-[30%] rounded-br-[30%] border-l-10 border-t-10 border-secondary"
       >
         <img
           :src="product.thumbnail"
@@ -43,17 +40,16 @@
   </router-link>
 </template>
 <script setup lang="ts">
-  interface ProductCardProps {
-    id: number
-    title: string
-    brand: string
-    thumbnail: string
-    discountPercentage?: number
-    rating: number
-  }
-  
-  defineProps<{
-    product: ProductCardProps
-  }>()
-  </script>
-  
+interface ProductCardProps {
+  id: number;
+  title: string;
+  brand: string;
+  thumbnail: string;
+  discountPercentage?: number;
+  rating: number;
+}
+
+defineProps<{
+  product: ProductCardProps;
+}>();
+</script>

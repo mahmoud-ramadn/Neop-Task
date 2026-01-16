@@ -14,7 +14,7 @@
     />
 
     <section
-      class="container mx-auto  px-4 md:px-6 py-8 md:py-16 lg:py-24 flex flex-col lg:flex-row items-center  min-h-[700px] lg:min-h-[800px] relative"
+      class="container mx-auto px-4 md:px-6 py-8 md:py-16 lg:py-24 flex flex-col lg:flex-row items-center min-h-[700px] lg:min-h-[800px] relative"
     >
       <motion.div
         class="w-full lg:w-1/2 relative z-10 md:mb-10 lg:mb-0 lg:pe-8"
@@ -67,9 +67,7 @@
     </section>
 
     <motion.div
-      class="2xl:w-[1200px] lg:w-[800px] md:w-[600px] 
-      
-      sww mx-auto w-full md:top-1/4 sm:top-[30%] max-sm:top-[42%] top-[42%] absolute right-0"
+      class="2xl:w-[1200px] lg:w-[800px] md:w-[600px] sww mx-auto w-full md:top-1/4 sm:top-[30%] max-sm:top-[42%] top-[42%] absolute right-0"
       :initial="{ opacity: 0, scale: 0.9 }"
       :while-in-view="{ opacity: 1, scale: 1 }"
       :transition="{ duration: 0.8, ease: 'easeOut', delay: 0.6 }"
@@ -141,13 +139,12 @@ const options = {
   border-radius: 50%;
 }
 
-
 @media (max-width: 1023px) {
   .hero-swiper :deep(.swiper-slide) {
     opacity: 0.7;
     transform: scale(0.9);
   }
-  
+
   .hero-swiper :deep(.swiper-slide-active) {
     transform: scale(1);
   }
@@ -166,15 +163,14 @@ const options = {
   }
 }
 
-@media (min-width:545px) and (max-width: 639px)   {
+@media (min-width: 545px) and (max-width: 639px) {
   .sww {
-    margin-top:-170px;
-  }
-} 
-@media (max-width: 420px) {
-  .sww {
- margin-top:120px;
+    margin-top: -170px;
   }
 }
-
+@media (max-width: 420px) {
+  .sww {
+    margin-top: 120px;
+  }
+}
 </style>
