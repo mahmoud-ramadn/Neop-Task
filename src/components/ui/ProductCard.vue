@@ -1,7 +1,7 @@
 <template>
   <router-link
     :to="`/product/${product.id}`"
-    class="w-full relative block"
+    class="w-full relative  block"
   >
     <span
       v-if="product.discountPercentage"
@@ -11,10 +11,10 @@
     </span>
 
     <div
-      class="w-full rounded-tr-[20%] rounded-tl-[20%] p-2 rounded-bl-[30%] rounded-br-[30%] bg-primary group transition-all duration-300"
+      class="w-full lg:h-[360px] md:h-[233px] rounded-tr-[20%] rounded-tl-[20%] p-2 rounded-bl-[30%] rounded-br-[30%] bg-primary group transition-all duration-300"
     >
       <div
-        class="relative overflow-hidden rounded-tr-[20%] rounded-tl-[20%] rounded-bl-[30%] rounded-br-[30%] border-l-10 border-t-10 border-secondary"
+        class="relative overflow-hidden  h-full rounded-tr-[20%] rounded-tl-[20%] rounded-bl-[30%] rounded-br-[30%] border-l-10 border-t-10 border-secondary"
       >
         <img
           :src="product.thumbnail"
