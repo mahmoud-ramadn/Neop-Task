@@ -4,7 +4,7 @@
     :clone="true"
     :loop="0"
     :pause-on-hover="true"
-    class="vue3-marquee w-full flex justify-center gap-x-16 overflow-hidden"
+    class="vue3-marquee mt-20 w-full flex justify-center gap-x-16 overflow-hidden"
   >
     <div class="flex mx-3 w-full gap-x-20">
       <div

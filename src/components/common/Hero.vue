@@ -159,18 +159,19 @@ const options = {
 
 @media (min-width: 640px) and (max-width: 768px) {
   .sww {
-    margin: 0 auto 160px auto;
+    /* margin: 0 auto -190px auto; */
   }
 }
 
-@media (min-width: 545px) and (max-width: 639px) {
+/* /* @media (min-width: 545px) and (max-width: 639px) {
   .sww {
     margin-top: -170px;
   }
-}
+} */
+
 @media (max-width: 420px) {
   .sww {
-    margin-top: 120px;
+    margin-top: 140px;
   }
-}
+} 
 </style>
