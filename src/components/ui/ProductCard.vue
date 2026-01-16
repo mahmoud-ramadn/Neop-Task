@@ -16,6 +16,7 @@
         <img
           :src="product.thumbnail"
           :alt="product.title"
+          loading="lazy"
           class="w-full object-cover bg-white h-full transition-transform duration-300 group-hover:scale-110"
         />
       </div>
